@@ -1,0 +1,28 @@
+<form [formGroup]="forma">
+<div>
+        <mat-form-field>
+          <input matInput placeholder="Nombre" formControlName="nombre">
+        </mat-form-field>
+      
+        <mat-form-field>
+          <textarea matInput placeholder="Direccion" formControlName="direccion"></textarea>
+        </mat-form-field>
+
+        <mat-form-field>
+                <input matInput placeholder="Telefono">
+        </mat-form-field>
+      
+        <mat-form-field>
+          <mat-select placeholder="Categoria">
+            <mat-option value="option">Comercial</mat-option>
+            <mat-option value="option">Residencial</mat-option>
+            <mat-option value="option">Mixta</mat-option>
+          </mat-select>
+        </mat-form-field>
+        
+        <div>
+                <button (click)="guardarCambios()" mat-raised-button color="primary">Editar</button>
+                <button (click)="onNoClick()" type="button" mat-raised-button color="warn">Cancelar</button>
+        </div>
+    </div>
+</form>
